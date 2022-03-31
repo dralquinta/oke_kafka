@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+  consumer: 
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    image: consumer:latest

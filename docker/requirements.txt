@@ -1,0 +1,5 @@
+oci>=2.2.18
+kafka-python>=1.4.4
+rust>=0.1.1
+confluent-kafka
+certifi
