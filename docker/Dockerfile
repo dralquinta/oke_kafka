@@ -10,4 +10,5 @@ RUN /opt/venv/bin/pip3 install --upgrade pip &&  \
     /opt/venv/bin/pip3 install -r requirements.txt && \
     chmod +x entrypoint.sh
 
-CMD ["/app/entrypoint.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
+CMD ["-D", "FOREGROUND"]
