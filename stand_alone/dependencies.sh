@@ -11,7 +11,7 @@
         pip3 install --upgrade pip
 
         echo '============== Installing app dependencies =============='
-        pip3 install -r ../../streams_manipulation_poc/requirements.txt
+        pip3 install -r ../docker/requirements.txt
         chmod -R 775 venv
     fi
 

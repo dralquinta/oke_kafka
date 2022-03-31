@@ -5,6 +5,8 @@ __pycache__/
 
 venv
 dependencies.sh
+testing.sh
+props
 
 # C extensions
 *.so

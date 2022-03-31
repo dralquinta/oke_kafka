@@ -3,7 +3,7 @@ import certifi
 
 
 __REGION='sa-santiago-1'
-__STREAM_NAME='send'
+__STREAM_NAME='receive'
 __TENANCY_NAME='ecrcloud'
 __STREAMPOOL_OCID='ocid1.streampool.oc1.sa-santiago-1.amaaaaaatwfhi7yann7kjkdd4ftxo6xjzutflmqvb7za3xovrm4nc6qwmxia'
 __OCI_USERNAME='ecrcloud/oracleidentitycloudservice/denny.alquinta@oracle.com'

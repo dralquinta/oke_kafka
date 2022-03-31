@@ -1,5 +1,6 @@
 FROM --platform=linux/amd64 python:3.9.7-slim
 
+RUN mkdir -p /app/props
 COPY . /app
 WORKDIR /app
 
