@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: propsconfigmap
+data:
+  config.properties: |-
+    [artifact_config]
+    stream.region=sa-santiago-1
+    stream.origin=incoming_stream
+    stream.destination=outgoing_stream
+    stream.tenancy=ecrcloud
+    stream.pool_ocid=ocid1.streampool.oc1.sa-santiago-1.amaaaaaatwfhi7yann7kjkdd4ftxo6xjzutflmqvb7za3xovrm4nc6qwmxia
+    stream.username=oracleidentitycloudservice/denny.alquinta@oracle.com
+    stream.sasl_token=T_YUSe3W7VIbMui2kbj:

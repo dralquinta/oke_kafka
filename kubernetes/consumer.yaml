@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consumer
+  labels:
+    app: consumer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: consumer
+  template:
+    metadata:
+      labels:
+        app: consumer
+    spec:
+      containers:
+      - name: consumer
+        image: sa-santiago-1.ocir.io/idhkis4m3p5e/okestreams:latest
+        imagePullPolicy: Always        
+        volumeMounts:
+        - name: config-volume
+          mountPath: "/app/props/config.properties"
+          subPath: "config.properties"
+          readOnly: true
+      volumes:
+      - name: config-volume
+        configMap:
+          name: propsconfigmap 
+      imagePullSecrets:
+        - name: ocirsecret
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: consumer-service
+  labels:
+    app: consumer
+
+spec:
+  ports:
+  - name: http
+    protocol: TCP
+    port: 8000
+    targetPort: 8000  
+  selector:
+    app: consumer
